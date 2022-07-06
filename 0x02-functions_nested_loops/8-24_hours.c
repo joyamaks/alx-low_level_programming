@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * void jack_bauer(void) - prints every minute of the day
- * Return: 0 (success)
+ * jack_bauer -> prints every minute of the day
  */
 void jack_bauer(void)
 {
@@ -18,13 +17,14 @@ void jack_bauer(void)
 			}
 			else if (i >= 10)
 			{
-				putchar(i + '1');
+				_putchar(i + '1');
+
 			}
 			if (j < 10)
 			{
 				_putchar(':');
 				_putchar('0');
-				_putchar('j + 0');
+				_putchar(j + '0');
 			}
 			else if (j >= 10)
 			{
@@ -32,9 +32,8 @@ void jack_bauer(void)
 				_putchar((j / 10) + '0');
 				_putchar((j % 10) + '0');
 			}
-			putchar('/n');
+			_putchar('/n');
 		}
 	}
-	return (0);
 }
 
