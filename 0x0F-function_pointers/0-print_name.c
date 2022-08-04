@@ -3,7 +3,7 @@
 #include "function_pointers.h"
 /**
  * print_name -function that prints name
- * name: name of a person
+ * @name: name of a person
  * @f: pointer to print upper or lower
  * Return: nothing
  */
