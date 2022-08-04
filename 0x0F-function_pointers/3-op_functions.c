@@ -12,7 +12,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- * op_sub: return the difference of a & b
+ * op_sub - return the difference of a & b
  * @a: input
  * @b: input
  * Return: nothing
@@ -32,7 +32,7 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- * op_div: ....
+ * op_div - division of 2 numbers
  * @a: ...
  * @b: ...
  * Return: ...
