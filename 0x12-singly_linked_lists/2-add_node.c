@@ -10,39 +10,24 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
+	int i, count = 0;
+	list_t *new;
 
-	if (head != NULL && str != NULL)
-	{
-		temp = malloc(sizeof(list_t));
-		if (temp == NULL)
-			return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-		temp->str = strdup(str);
-		temp->len = _strlen(str);
-		temp->next = *head;
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
 
-		*head = temp;
+	for (i = 0; str[i] != '\0'; i++)
+		count++;
 
-		return (temp);
-	}
+	new->len = i;
+	new->str = strdup(str);
+	new->next = *head;
 
-	return (0);
-}
+	*head = new;
 
-/**
- * _strlen - Returns the length of a string
- * @s: String to count
- * Return: String length
- */
-int _strlen(const char *s)
-{
-	int c = 0;
-
-	while (*s != NULL)
-	{
-		s++;
-		c++;
-	}
-	return (c);
+	return (new);
 }
